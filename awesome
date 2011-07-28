@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CLASSPATH="target/oscon-0.1.0.jar"
+for jar in lib/*.jar; do
+    CLASSPATH="$CLASSPATH:$jar"
+done
+
+"$JAVA_HOME/bin/java" -cp "$CLASSPATH" awesome.Main "$@"
+
